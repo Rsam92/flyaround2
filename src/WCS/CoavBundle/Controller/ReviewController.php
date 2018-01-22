@@ -75,4 +75,24 @@ class ReviewController extends Controller
     Celle-ci prend deux paramètres obligatoires, ta classe formulaire (donc ReviewType) et un objet $review
     qui recevera toutes les informations que tu auras envoyé lors de la soumission du formulaire.
 */
+	
+	/**
+	 * Finds and displays a review entity.
+	 *
+	 * @Route("/{id}", name="review_show")
+	 * @Method("GET")
+	 */
+	public function showAction(Review $review)
+	{
+		//$deleteForm = $this->createDeleteForm($review);
+		
+		return $this->render(
+			'review/show.html.twig', array(
+				'review' => $review,
+				//'delete_form' => $deleteForm->createView(),
+			)
+		);
+	}
+    
+    
     }
