@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block title %}WCSCoavBundle:Review:index{% endblock %}
+
+{% block body %}
+
+<h1>Welcome to the Review:index page</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nbreservedseats</th>
+        <th>Publicationdate</th>
+        <th>Passenger</th>
+        <th>Flight</th>
+        <th>Wasdone</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+
+    <a href="{{ path('review_new') }}"> Create a new review </a>
+
+{% endblock %}
